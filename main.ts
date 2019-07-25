@@ -373,7 +373,7 @@ namespace SuperBit {
         MotorStopAll()
     }
 
-    //% blockId=SuperBit_MotorStopAll block="Motor Stop"
+    //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
     //% weight=91
     //% blockGap=50
     export function MotorStopAll(): void {
@@ -424,5 +424,15 @@ namespace SuperBit {
     export function PWMOFF(index: number): void {
         setPwm(index, 0, 0);
     }
+
+
+    //% blockId=SuperBit_HelloWorld block="Hello World"
+    //% weight=86
+    //% blockGap=50
+    export function HelloWorld(): void {
+       
+
+    }
+
 
 }
