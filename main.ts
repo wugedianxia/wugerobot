@@ -1,4 +1,4 @@
-﻿/*
+/*
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
@@ -14,7 +14,6 @@ namespace SuperBit {
     const SUBADR1 = 0x02
     const SUBADR2 = 0x03
     const SUBADR3 = 0x04
-
     const LED0_ON_L = 0x06
     const LED0_ON_H = 0x07
     const LED0_OFF_L = 0x08
@@ -43,6 +42,7 @@ namespace SuperBit {
     let yahStrip: neopixel.Strip;
 
 
+
     export enum enMusic {
 
         dadadum = 0,
@@ -67,14 +67,14 @@ namespace SuperBit {
         power_up,
         power_down
     }
-    
 
-    
+
+
     export enum enSteppers {
         B1 = 0x1,
         B2 = 0x2
     }
-    export enum enPos { 
+    export enum enPos {
         //% blockId="forward" block="forward"
         forward = 1,
         //% blockId="reverse" block="reverse"
@@ -99,9 +99,9 @@ namespace SuperBit {
         //% blockId="T5B0" block="5"
         T5B0 = 1800
     }
-    
+
     export enum enServo {
-        
+
         S1 = 0,
         S2,
         S3,
@@ -209,19 +209,19 @@ namespace SuperBit {
     /**
      * *****************************************************************
      * @param index
-     */   
+     */
     //% blockId=SuperBit_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Program(): neopixel.Strip {
-         
+
         if (!yahStrip) {
             yahStrip = neopixel.create(DigitalPin.P12, 4, NeoPixelMode.RGB);
         }
-        return yahStrip;  
-    } 
-    
+        return yahStrip;
+    }
+
     //% blockId=SuperBit_Music block="Music|%index"
     //% weight=98
     //% blockGap=10
@@ -250,7 +250,7 @@ namespace SuperBit {
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
     }
-    
+
     //% blockId=SuperBit_Servo block="Servo(180°)|num %num|value %value"
     //% weight=97
     //% blockGap=10
@@ -288,24 +288,24 @@ namespace SuperBit {
     export function Servo3(num: enServo, pos: enPos, value: number): void {
 
         // 50hz: 20,000 us
-        
+
         if (pos == enPos.stop) {
             let us = (86 * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
             setPwm(num, 0, pwm);
         }
-        else if(pos == enPos.forward){ //0-90 -> 90 - 0
-            let us = ((90-value) * 1800 / 180 + 600); // 0.6 ~ 2.4
+        else if (pos == enPos.forward) { //0-90 -> 90 - 0
+            let us = ((90 - value) * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
             setPwm(num, 0, pwm);
         }
-        else if(pos == enPos.reverse){ //0-90 -> 90 -180
-            let us = ((90+value) * 1800 / 180 + 600); // 0.6 ~ 2.4
+        else if (pos == enPos.reverse) { //0-90 -> 90 -180
+            let us = ((90 + value) * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
             setPwm(num, 0, pwm);
         }
 
-       
+
 
     }
     //% blockId=SuperBit_MotorRun block="Motor|%index|speed(-255~255) %speed"
@@ -326,9 +326,8 @@ namespace SuperBit {
 
         let a = index
         let b = index + 1
-        
-        if (a > 10)
-        {
+
+        if (a > 10) {
             if (speed >= 0) {
                 setPwm(a, 0, speed)
                 setPwm(b, 0, 0)
@@ -337,7 +336,7 @@ namespace SuperBit {
                 setPwm(b, 0, -speed)
             }
         }
-        else { 
+        else {
             if (speed >= 0) {
                 setPwm(b, 0, speed)
                 setPwm(a, 0, 0)
@@ -346,9 +345,9 @@ namespace SuperBit {
                 setPwm(a, 0, -speed)
             }
         }
-        
+
     }
-    
+
 
 
     //% blockId=SuperBit_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
@@ -381,12 +380,12 @@ namespace SuperBit {
         if (!initialized) {
             initPCA9685()
         }
-        
+
         stopMotor(enMotors.M1);
         stopMotor(enMotors.M2);
         stopMotor(enMotors.M3);
         stopMotor(enMotors.M4);
-        
+
     }
 
     //% blockId=SuperBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
