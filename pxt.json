@@ -1,7 +1,7 @@
 {
     "name": "WUGEBIT",
     "version": "1.0.0",
-    "description": "Extension for WUGEBIT V1.7",
+    "description": "Extension for WUGEBIT V1.8",
     "license": "MIT",
     "dependencies": {
         "core": "*",
