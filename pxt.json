@@ -1,7 +1,7 @@
 {
-    "name": "SuperBit",
+    "name": "WUGEBIT",
     "version": "1.0.0",
-    "description": "Extension for YahBoom SuperBit V1.6",
+    "description": "Extension for WUGEBIT V1.7",
     "license": "MIT",
     "dependencies": {
         "core": "*",

@@ -1,0 +1,20 @@
+{
+    "target": "microbit",
+    "targetVersion": "2.0.6",
+    "name": "WUGEBIT",
+    "meta": {},
+    "editor": "tsprj",
+    "pubId": "",
+    "pubCurrent": false,
+    "_rev": null,
+    "id": "d664daa3-191d-44ce-6fbb-f52d1ebfeabe",
+    "recentUse": 1564029631,
+    "modificationTime": 1564029631,
+    "blobId": null,
+    "blobVersion": null,
+    "blobCurrent": false,
+    "isDeleted": false,
+    "path": "SuperBit",
+    "githubCurrent": false,
+    "saveId": null
+}
