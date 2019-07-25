@@ -1,7 +1,7 @@
 {
     "name": "SuperBit",
     "version": "1.0.0",
-    "description": "Extension for YahBoom SuperBit V1.4",
+    "description": "Extension for YahBoom SuperBit V1.5",
     "license": "MIT",
     "dependencies": {
         "core": "*",
