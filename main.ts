@@ -373,7 +373,7 @@ namespace SuperBit {
         MotorStopAll()
     }
 
-    //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
+    //% blockId=SuperBit_MotorStopAll block="Motor Stop"
     //% weight=91
     //% blockGap=50
     export function MotorStopAll(): void {
@@ -387,26 +387,6 @@ namespace SuperBit {
         stopMotor(enMotors.M4);
 
     }
-
-
-    //% blockId=SuperBit_MotorStopAll1 block="Motor Stop All"
-    //% weight=1
-    //% blockGap=50
-    export function MotorStopAll1(): void {
-        if (!initialized) {
-            initPCA9685()
-        }
-
-        stopMotor(enMotors.M1);
-        stopMotor(enMotors.M2);
-        stopMotor(enMotors.M3);
-        stopMotor(enMotors.M4);
-
-    }
-
-
-
-
 
     //% blockId=SuperBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
     //% weight=89
