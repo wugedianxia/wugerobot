@@ -2,7 +2,7 @@
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
-"SuperBit": "file:../pxt-Superbit"
+"WUGEBIT": "file:../pxt-WUGEBIT"
 */
 
 //% color="#ECA40D" weight=20 icon="\uf085" 
@@ -210,7 +210,7 @@ namespace WUGEBIT {
      * *****************************************************************
      * @param index
      */
-    //% blockId=SuperBit_RGB_Program block="RGB_Program"
+    //% blockId=WUGEBIT_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -222,7 +222,7 @@ namespace WUGEBIT {
         return yahStrip;
     }
 
-    //% blockId=SuperBit_Music block="Music|%index"
+    //% blockId=WUGEBIT_Music block="Music|%index"
     //% weight=98
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -251,7 +251,7 @@ namespace WUGEBIT {
         }
     }
 
-    //% blockId=SuperBit_Servo block="Servo(180°)|num %num|value %value"
+    //% blockId=WUGEBIT_Servo block="Servo(180°)|num %num|value %value"
     //% weight=97
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=180
@@ -265,7 +265,7 @@ namespace WUGEBIT {
 
     }
 
-    //% blockId=SuperBit_Servo2 block="Servo(270°)|num %num|value %value"
+    //% blockId=WUGEBIT_Servo2 block="Servo(270°)|num %num|value %value"
     //% weight=96
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=270
@@ -280,7 +280,7 @@ namespace WUGEBIT {
 
     }
 
-    //% blockId=SuperBit_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
+    //% blockId=WUGEBIT_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
     //% weight=96
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=90
@@ -308,7 +308,7 @@ namespace WUGEBIT {
 
 
     }
-    //% blockId=SuperBit_MotorRun block="Motor|%index|speed(-255~255) %speed"
+    //% blockId=WUGEBIT_MotorRun block="Motor|%index|speed(-255~255) %speed"
     //% weight=93
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -350,7 +350,7 @@ namespace WUGEBIT {
 
 
 
-    //% blockId=SuperBit_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
+    //% blockId=WUGEBIT_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
     //% weight=92
     //% blockGap=50
     //% speed1.min=-255 speed1.max=255
@@ -361,7 +361,7 @@ namespace WUGEBIT {
         MotorRun(motor2, speed2);
     }
 
-    //% blockId=SuperBit_StepperDegree block="Stepper Motor(28BYJ-48) |%index|degree %degree"
+    //% blockId=WUGEBIT_StepperDegree block="Stepper Motor(28BYJ-48) |%index|degree %degree"
     //% weight=90
     export function StepperDegree(index: enSteppers, degree: number): void {
         if (!initialized) {
@@ -373,7 +373,7 @@ namespace WUGEBIT {
         MotorStopAll()
     }
 
-    //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
+    //% blockId=WUGEBIT_MotorStopAll block="Motor Stop All"
     //% weight=91
     //% blockGap=50
     export function MotorStopAll(): void {
@@ -388,14 +388,14 @@ namespace WUGEBIT {
 
     }
 
-    //% blockId=SuperBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
+    //% blockId=WUGEBIT_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
     //% weight=89
     export function StepperTurn(index: enSteppers, turn: enTurns): void {
         let degree = turn;
         StepperDegree(index, degree);
     }
 
-    //% blockId=SuperBit_StepperDual block="Dual Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
+    //% blockId=WUGEBIT_StepperDual block="Dual Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
     //% weight=88
     export function StepperDual(degree1: number, degree2: number): void {
         if (!initialized) {
@@ -419,7 +419,7 @@ namespace WUGEBIT {
         MotorStopAll()
     }
 
-    //% blockId=SuperBit_PWMOFF block="PWM OFF|%index"
+    //% blockId=WUGEBIT_PWMOFF block="PWM OFF|%index"
     //% weight=87
     export function PWMOFF(index: number): void {
         setPwm(index, 0, 0);

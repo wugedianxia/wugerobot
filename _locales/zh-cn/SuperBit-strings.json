@@ -1,5 +1,4 @@
 {
-
   "WUGEBIT.RGB_Program|block": "RGB编程灯",
   "WUGEBIT.Music|block": "音乐播放|%index",
   "WUGEBIT.Servo|block": "舵机(180)|编号 %num|角度 %value",
@@ -15,9 +14,5 @@
   "WUGEBIT.enPos.reverse|block": "反转",
   "WUGEBIT.enPos.stop|block": "停止",
   "WUGEBIT.PWMOFF|block":  "关闭PWM输出|%index"
-  
 
-  
-
- 
 }
