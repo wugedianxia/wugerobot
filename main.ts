@@ -426,11 +426,28 @@ namespace SuperBit {
     }
 
 
-    //% blockId=SuperBit_HelloWorld block="Hello"
-    //% weight=86
+    //% blockId=SuperBit_Blink block="LED Blink"
+    //% weight=85
     //% blockGap=50
-    export function HelloWorld(): void {
-       
+    export function Blink(): void {
+
+        basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+        basic.pause(100)
+        basic.showLeds(`
+        # # . # #
+        # . . . #
+        . . # . .
+        # . . . #
+        # # . # #
+        `)
+        basic.pause(100)
+
     }
     
         //% blockId=SuperBit_HelloWorld1 block="Hello"

@@ -14,7 +14,8 @@
   "SuperBit.enPos.forward|block": "正转",
   "SuperBit.enPos.reverse|block": "反转",
   "SuperBit.enPos.stop|block": "停止",
-  "SuperBit.PWMOFF|block":  "关闭PWM输出|%index"
+  "SuperBit.PWMOFF|block":  "关闭PWM输出|%index",
+  "SuperBit.Blink|block": "闪烁"
   
 
   
