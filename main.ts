@@ -449,12 +449,5 @@ namespace SuperBit {
         basic.pause(100)
 
     }
-    
-        //% blockId=SuperBit_HelloWorld1 block="Hello"
-    //% weight=85
-    //% blockGap=50
-    export function HelloWorld(): void {
-       
-    }
 
 }
