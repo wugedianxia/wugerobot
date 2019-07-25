@@ -42,49 +42,6 @@ namespace SuperBit {
     let initialized = false
     let yahStrip: neopixel.Strip;
 
-   
-    export enum OUTPINS {
-        //% block="OUT1"
-        OUT1,
-        //% block="OUT2"
-        OUT2,
-        //% block="OUT3"
-        OUT3,
-        //% block="OUT4"
-        OUT4,
-        //% block="OUT5"
-        OUT5,
-        //% block="OUT6"
-        OUT6
-    }
-    
-    export enum OUTPUT_State {
-        //% block="OPEN"
-        OPEN,
-        //% block="CLOSE"
-        CLOSE,
-    }
-    
-    export enum enMotors {
-        M1 = 8,
-        M2 = 10,
-        M3 = 12,
-        M4 = 14
-    }
-
-    //% block="Set |%e| LED %e2"
-    export function OUTOUT_LED(e: OUTPINS , e1: OUTPUT_State): void {
-        // Add code here
-
-     if (e == OUTPINS.OUT1 && e1 == OUTPUT_State.OPEN) {
-        pins.digitalWritePin(DigitalPin.P0, 1)
-    }
-    else if(e == OUTPINS.OUT1 && e1 == OUTPUT_State.CLOSE)
-
-        pins.digitalWritePin(DigitalPin.P0, 0)
-
-    }
-
 
     export enum enMusic {
 
