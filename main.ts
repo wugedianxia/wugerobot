@@ -426,7 +426,7 @@ namespace SuperBit {
     }
 
 
-    //% blockId=SuperBit_HelloWorld block="Hello World 456"
+    //% blockId=SuperBit_HelloWorld block="Hello"
     //% weight=86
     //% blockGap=50
     export function HelloWorld(): void {
