@@ -373,7 +373,7 @@ namespace SuperBit {
         MotorStopAll()
     }
 
-    //% blockId=SuperBit_MotorStopAll block="Motor Stop All0"
+    //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
     //% weight=91
     //% blockGap=50
     export function MotorStopAll(): void {
