@@ -431,7 +431,13 @@ namespace SuperBit {
     //% blockGap=50
     export function HelloWorld(): void {
        
+    }
 
+        //% blockId=SuperBit_HelloWorld1 block="Hello Wugebot"
+    //% weight=85
+    //% blockGap=50
+    export function HelloWorld1(): void {
+       
     }
 
 
