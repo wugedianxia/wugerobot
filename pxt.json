@@ -1,7 +1,7 @@
 {
     "name": "SuperBit",
-    "version": "1.0.4",
-    "description": "Extension for WugeRobot V1.0.3",
+    "version": "1.0.5",
+    "description": "Extension for WugeRobot V1.0.5",
     "license": "MIT",
     "dependencies": {
         "core": "*",
