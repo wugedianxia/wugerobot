@@ -42,13 +42,6 @@ namespace SuperBit {
     let yahStrip: neopixel.Strip;
 
 
-       //% block
-       export function helloWorld() {
-
-    }
-
-
-
     export enum enMusic {
 
         dadadum = 0,
@@ -212,6 +205,7 @@ namespace SuperBit {
         setPwm(index, 0, 0);
         setPwm(index + 1, 0, 0);
     }
+
     /**
      * *****************************************************************
      * @param index
@@ -393,6 +387,26 @@ namespace SuperBit {
         stopMotor(enMotors.M4);
 
     }
+
+
+    //% blockId=SuperBit_MotorStopAll1 block="Motor Stop All"
+    //% weight=1
+    //% blockGap=50
+    export function MotorStopAll1(): void {
+        if (!initialized) {
+            initPCA9685()
+        }
+
+        stopMotor(enMotors.M1);
+        stopMotor(enMotors.M2);
+        stopMotor(enMotors.M3);
+        stopMotor(enMotors.M4);
+
+    }
+
+
+
+
 
     //% blockId=SuperBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
     //% weight=89
