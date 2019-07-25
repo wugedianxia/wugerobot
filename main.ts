@@ -42,6 +42,12 @@ namespace SuperBit {
     let yahStrip: neopixel.Strip;
 
 
+       //% block
+       export function helloWorld() {
+
+    }
+
+
 
     export enum enMusic {
 
