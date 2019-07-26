@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:kittenbot/pxt-neopixel#v0.6.12"
+        "neopixel": "github:microsoft/pxt-neopixel"
     },
     "files": [
         "README.md",
@@ -18,5 +18,5 @@
     ],
     "public": true,
     "preferredEditor": "tsprj",
-    "installedVersion": "workspace:5a7b7bd0-a76b-4d6b-be7f-62d87f00b756"
+    "installedVersion": "workspace:462a7046-46a7-4868-bb94-46b496440861"
 }
