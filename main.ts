@@ -510,4 +510,40 @@ namespace SuperBit {
             return false;
     }
 
+    /**
+模拟传感器
+ */
+
+    export enum AnalogSensors {
+        Potentiometer = 0,
+        Voice = 1,
+        Light = 2,
+        Sliding = 3,
+        Ultrasonic = 4,
+        Temperature = 5
+    }
+
+
+    /**
+ Returns the value of the moisture sensor on a scale of 0 to 100.
+ */
+    //% blockId=SuperBit_AnalogSensor weight=85 blockGap=22
+    //% block="%k | sensor at %p"
+    export function AnalogSensor(k: AnalogSensors, p: InputPins): number {
+        if (k == 0)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 100, 0);
+        else if (k == 1)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
+        else if (k == 2)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 100, 0);
+        else if (k == 3)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
+        else if (k == 4)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
+        else if (k == 5)
+            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
+        else
+            return 0;
+    }
+
 }
