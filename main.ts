@@ -482,9 +482,7 @@ namespace SuperBit {
         //% blockId="Sliding" block="Sliding"
         Sliding = 3,
         //% blockId="Ultrasonic" block="Ultrasonic"
-        Ultrasonic = 4,
-        //% blockId="Temperature" block="Temperature"
-        Temperature = 5
+        Ultrasonic = 4
     }
 
 
@@ -505,11 +503,10 @@ namespace SuperBit {
             return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
         else if (k == 4)
             return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
-        else if (k == 5)
-            return pins.map(pins.analogReadPin(p + 7), 0, 1023, 0, 100);
         else
             return 0;
     }
-    //%  blockGap = 30
+   
+ 
 
 }

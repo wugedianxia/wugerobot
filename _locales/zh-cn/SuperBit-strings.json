@@ -28,7 +28,6 @@
     "SuperBit.AnalogSensors.Light|block": "光线传感器",
     "SuperBit.AnalogSensors.Sliding|block": "滑杆传感器",
     "SuperBit.AnalogSensors.Ultrasonic|block": "超声波传感器",
-    "SuperBit.AnalogSensors.Temperature|block": "温度传感器",
     "SuperBit.DigitalSersor|block": "%k |传感器 引脚 %p",
     "SuperBit.AnalogSensor|block": "%k |传感器 引脚 %p"
 
