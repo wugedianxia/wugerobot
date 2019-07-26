@@ -425,29 +425,89 @@ namespace SuperBit {
         setPwm(index, 0, 0);
     }
 
+    export enum DigitalSensors {
+        Switch = 0,
+        Button = 1,
+        Limit_Switch = 2,
+        Touch_Button = 3,
+        Reed_Switch = 4,
+        Tilt_Switch = 5,
+        Trace_Sensor = 6,
+        Count_Sensor = 7,
+        Droplet_Sensor = 8
+    }
 
-    //% blockId=SuperBit_Blink block="LED Blink1"
-    //% weight=85
-    //% blockGap=50
-    export function Blink(): void {
+    export enum InputPins {
+        IN1 = 0,
+        IN2 = 1,
+        IN3 = 2,
+        IN4 = 3,
+    }
 
-        basic.showLeds(`
-        . . # . .
-        . # . # .
-        # . . . #
-        . # . # .
-        . . # . .
-        `)
-        basic.pause(10)
-        basic.showLeds(`
-        # # . # #
-        # . . . #
-        . . # . .
-        # . . . #
-        # # . # #
-        `)
-        basic.pause(10)
+    /**
+  数字传感器
+     */
 
+    //% blockId=SuperBit_DigitalSersor weight=86 blockGap=30
+    //% block="%k | sersor at %p"
+    export function DigitalSersor(k: DigitalSensors, p: InputPins): boolean {
+        //   let a: number = pins.digitalReadPin(p+7);
+        if (k == 0) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return false;
+            else
+                return true;
+        }
+        else if (k == 1) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 2) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 3) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 4) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 5) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 6) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 7) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else if (k == 8) {
+            if (pins.digitalReadPin(p + 7) < 1)
+                return true;
+            else
+                return false;
+        }
+        else
+            return false;
     }
 
 }
