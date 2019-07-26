@@ -6,7 +6,7 @@ load dependency
 */
 
 //% color="#ECA40D" weight=20 icon="\uf085" 
-namespace SuperBit {
+namespace WugeBit {
 
     const PCA9685_ADD = 0x40
     const MODE1 = 0x00
@@ -206,17 +206,36 @@ namespace SuperBit {
         setPwm(index + 1, 0, 0);
     }
 
+    export enum RGBPINS {
+
+        P0 = 0,
+        P1 = 1,
+        P2 = 2,
+        P3 = 3
+    }
+
     /**
      * *****************************************************************
      * @param index
      */
-    //% blockId=SuperBit_RGB_LED block="RGB LED"
+    //% blockId=SuperBit_RGB_LED block="RGB LED|%k with |%value | leds"
     //% weight=102
     //% blockGap=20
-    export function RGB_LED(): neopixel.Strip {
+    //% value.min=1 value.max=9
+    export function RGB_LED(k: RGBPINS, value: number): neopixel.Strip {
+
+
 
         if (!myStrip) {
-            myStrip = neopixel.create(DigitalPin.P12, 9, NeoPixelMode.RGB);
+
+            if (k == 0)
+                myStrip = neopixel.create(DigitalPin.P0, value, NeoPixelMode.RGB);
+            else if (k == 1)
+                myStrip = neopixel.create(DigitalPin.P1, value, NeoPixelMode.RGB);
+            else if (k == 2)
+                myStrip = neopixel.create(DigitalPin.P2, value, NeoPixelMode.RGB);
+            else if (k == 3)
+                myStrip = neopixel.create(DigitalPin.P3, value, NeoPixelMode.RGB);
         }
         return myStrip;
     }
@@ -395,10 +414,10 @@ namespace SuperBit {
     }
 
     export enum InputPins {
-        IN1 = 0,
-        IN2 = 1,
-        IN3 = 2,
-        IN4 = 3,
+        P0 = 0,
+        P1 = 1,
+        P2 = 2,
+        P3 = 3,
     }
 
     /**
@@ -506,7 +525,4 @@ namespace SuperBit {
         else
             return 0;
     }
-   
- 
-
 }
