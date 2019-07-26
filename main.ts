@@ -1,11 +1,4 @@
-/*
-Copyright (C): 2010-2019, Shenzhen Yahboom Tech
-modified from liusen
-load dependency
-"SuperBit": "file:../pxt-Superbit"
-*/
-
-//% color="#ECA40D" weight=20 icon="\uf085" 
+//% color="#ECA40D" weight=20 icon="\uf0a0" 
 namespace WugeBit {
 
     const PCA9685_ADD = 0x40

@@ -1,4 +1,5 @@
 {
+    "WugeBit|block": "五格",
     "WugeBit.RGB_LED|block": "全彩灯 引脚 |%k 灯珠|%value 颗",
     "WugeBit.Music|block": "音乐播放|%index",
     "WugeBit.Servo|block": "舵机(180)| %num|角度 %value",
@@ -30,9 +31,4 @@
     "WugeBit.AnalogSensors.Ultrasonic|block": "超声波传感器",
     "WugeBit.DigitalSersor|block": "%k |传感器 引脚 %p",
     "WugeBit.AnalogSensor|block": "%k |传感器 引脚 %p"
-
-
-    
-
-
 }
