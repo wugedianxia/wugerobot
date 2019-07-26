@@ -211,7 +211,7 @@ namespace SuperBit {
      * @param index
      */
     //% blockId=SuperBit_RGB_LED block="RGB LED"
-    //% weight=99
+    //% weight=102
     //% blockGap=20
     export function RGB_LED(): neopixel.Strip {
 
@@ -221,7 +221,7 @@ namespace SuperBit {
         return myStrip;
     }
 
-    //% blockId=SuperBit_Servo block="Servo(180°)|num %num|value %value"
+    //% blockId=SuperBit_Servo block="Servo(180°)|%num|value %value"
     //% weight=97
     //% blockGap=20
     //% num.min=1 num.max=4 value.min=0 value.max=180
@@ -234,21 +234,8 @@ namespace SuperBit {
 
     }
 
-    //% blockId=SuperBit_Servo2 block="Servo(270°)|num %num|value %value"
-    //% weight=96
-    //% blockGap=20
-    //% num.min=1 num.max=4 value.min=0 value.max=270
-    export function Servo2(num: enServo, value: number): void {
 
-        // 50hz: 20,000 us
-        let newvalue = Math.map(value, 0, 270, 0, 180);
-        let us = (newvalue * 1800 / 180 + 600); // 0.6 ~ 2.4
-        let pwm = us * 4096 / 20000;
-        setPwm(num, 0, pwm);
-
-    }
-
-    //% blockId=SuperBit_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
+    //% blockId=SuperBit_Servo3 block="Servo(360°)|%num|pos %pos|value %value"
     //% weight=96
     //% blockGap=20
     //% num.min=1 num.max=4 value.min=0 value.max=90
@@ -316,7 +303,7 @@ namespace SuperBit {
     }
 
     //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
-    //% weight=91
+    //% weight=86
     //%  blockGap = 20
     export function MotorStopAll(): void {
         if (!initialized) {
@@ -418,7 +405,7 @@ namespace SuperBit {
   数字传感器
      */
 
-    //% blockId=SuperBit_DigitalSersor weight=86 
+    //% blockId=SuperBit_DigitalSersor weight=101 
     //%  blockGap = 20
     //% block="%k | sersor at pin %p"
     export function DigitalSersor(k: DigitalSensors, p: InputPins): boolean {
@@ -504,7 +491,7 @@ namespace SuperBit {
     /**
  Returns the value of the moisture sensor on a scale of 0 to 100.
  */
-    //% blockId=SuperBit_AnalogSensor weight=85 
+    //% blockId=SuperBit_AnalogSensor weight=100 
     //%  blockGap = 20
     //% block="%k | sensor at pin %p"
     export function AnalogSensor(k: AnalogSensors, p: InputPins): number {
