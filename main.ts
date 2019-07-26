@@ -426,7 +426,7 @@ namespace SuperBit {
     }
 
 
-    //% blockId=SuperBit_Blink block="LED Blink"
+    //% blockId=SuperBit_Blink block="LED Blink1"
     //% weight=85
     //% blockGap=50
     export function Blink(): void {
@@ -438,7 +438,7 @@ namespace SuperBit {
         . # . # .
         . . # . .
         `)
-        basic.pause(100)
+        basic.pause(10)
         basic.showLeds(`
         # # . # #
         # . . . #
@@ -446,7 +446,7 @@ namespace SuperBit {
         # . . . #
         # # . # #
         `)
-        basic.pause(100)
+        basic.pause(10)
 
     }
 
