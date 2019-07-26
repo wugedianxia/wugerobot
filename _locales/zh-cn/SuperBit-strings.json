@@ -1,24 +1,39 @@
 {
+    "SuperBit.RGB_LED|block": "全彩灯条",
+    "SuperBit.Music|block": "音乐播放|%index",
+    "SuperBit.Servo|block": "舵机(180)|编号 %num|角度 %value",
+    "SuperBit.Servo2|block": "舵机(270)|编号 %num|角度 %value",
+    "SuperBit.Servo3|block": "舵机(360)|编号 %num|方向 %pos|速度 %value",
+    "SuperBit.MotorRun|block": " 直流电机|%index|速度(-255~255) %speed",
+    "SuperBit.MotorRunDual|block": " 直流电机|%motor1|速度(-255~255) %speed1|%motor2|速度(-255~255) %speed2",
+    "SuperBit.MotorStopAll|block": "停止所有电机",
+    "SuperBit.StepperDegree|block": "步进电机 |%index|角度 %degree",
+    "SuperBit.StepperTurn|block": "步进电机 |%index|转 %turn|圈数",
+    "SuperBit.StepperDual|block": "步进电机(角度) |B1 %degree1| B2 %degree2",
+    "SuperBit.enPos.forward|block": "正转",
+    "SuperBit.enPos.reverse|block": "反转",
+    "SuperBit.enPos.stop|block": "停止",
+    "SuperBit.PWMOFF|block": "关闭PWM输出|%index",
+    "SuperBit.DigitalSensors.Switch|block": "拨动开关",
+    "SuperBit.DigitalSensors.Button|block": "按钮",
+    "SuperBit.DigitalSensors.Limit_Switch|block": "限位开关",
+    "SuperBit.DigitalSensors.Touch_Button|block": "触摸开关",
+    "SuperBit.DigitalSensors.Reed_Switch|block": "磁性开关",
+    "SuperBit.DigitalSensors.Tilt_Switch|block": "倾斜开关",
+    "SuperBit.DigitalSensors.Trace_Sensor|block": "循迹模块",
+    "SuperBit.DigitalSensors.Count_Sensor|block": "计数模块",
+    "SuperBit.DigitalSensors.Droplet_Sensor|block": "水滴模块",
+    "SuperBit.AnalogSensors.Potentiometer|block": "旋转电位器",
+    "SuperBit.AnalogSensors.Voice|block": "声音传感器",
+    "SuperBit.AnalogSensors.Light|block": "光线传感器",
+    "SuperBit.AnalogSensors.Sliding|block": "滑杆传感器",
+    "SuperBit.AnalogSensors.Ultrasonic|block": "超声波传感器",
+    "SuperBit.AnalogSensors.Temperature|block": "温度传感器",
+    "SuperBit.DigitalSersor|block": "%k |传感器 引脚 %p",
+    "SuperBit.AnalogSensor|block": "%k |传感器 引脚 %p"
 
-  "SuperBit.RGB_Program|block": "RGB编程灯",
-  "SuperBit.Music|block": "音乐播放|%index",
-  "SuperBit.Servo|block": "舵机(180)|编号 %num|角度 %value",
-  "SuperBit.Servo2|block": "舵机(270)|编号 %num|角度 %value",
-  "SuperBit.Servo3|block": "舵机(360)|编号 %num|方向 %pos|速度 %value",
-  "SuperBit.MotorRun|block": " 直流电机|%index|速度(-255~255) %speed",
-  "SuperBit.MotorRunDual|block": " 直流电机|%motor1|速度(-255~255) %speed1|%motor2|速度(-255~255) %speed2",
-  "SuperBit.MotorStopAll|block": "停止所有电机",
-  "SuperBit.StepperDegree|block": "步进电机(28BYJ-48) |%index|角度 %degree",
-  "SuperBit.StepperTurn|block": "步进电机(28BYJ-48) |%index|转 %turn|圈数",
-  "SuperBit.StepperDual|block": "双步进电机(角度) |B1 %degree1| B2 %degree2",
-  "SuperBit.enPos.forward|block": "正转",
-  "SuperBit.enPos.reverse|block": "反转",
-  "SuperBit.enPos.stop|block": "停止",
-  "SuperBit.PWMOFF|block":  "关闭PWM输出|%index",
-  "SuperBit.Blink|block": "闪烁"
-  
 
-  
+    
 
- 
+
 }

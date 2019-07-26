@@ -210,11 +210,10 @@ namespace SuperBit {
      * *****************************************************************
      * @param index
      */
-    //% blockId=SuperBit_RGB_Program block="RGB_Program"
+    //% blockId=SuperBit_RGB_LED block="RGB LED"
     //% weight=99
-    //% blockGap=10
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Program(): neopixel.Strip {
+    //% blockGap=20
+    export function RGB_LED(): neopixel.Strip {
 
         if (!myStrip) {
             myStrip = neopixel.create(DigitalPin.P12, 9, NeoPixelMode.RGB);
@@ -222,40 +221,10 @@ namespace SuperBit {
         return myStrip;
     }
 
-    //% blockId=SuperBit_Music block="Music|%index"
-    //% weight=98
-    //% blockGap=10
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function Music(index: enMusic): void {
-        switch (index) {
-            case enMusic.dadadum: music.beginMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once); break;
-            case enMusic.birthday: music.beginMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once); break;
-            case enMusic.entertainer: music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once); break;
-            case enMusic.prelude: music.beginMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once); break;
-            case enMusic.ode: music.beginMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once); break;
-            case enMusic.nyan: music.beginMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once); break;
-            case enMusic.ringtone: music.beginMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once); break;
-            case enMusic.funk: music.beginMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once); break;
-            case enMusic.blues: music.beginMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once); break;
-            case enMusic.wedding: music.beginMelody(music.builtInMelody(Melodies.Wedding), MelodyOptions.Once); break;
-            case enMusic.funereal: music.beginMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once); break;
-            case enMusic.punchline: music.beginMelody(music.builtInMelody(Melodies.Punchline), MelodyOptions.Once); break;
-            case enMusic.baddy: music.beginMelody(music.builtInMelody(Melodies.Baddy), MelodyOptions.Once); break;
-            case enMusic.chase: music.beginMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.Once); break;
-            case enMusic.ba_ding: music.beginMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once); break;
-            case enMusic.wawawawaa: music.beginMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once); break;
-            case enMusic.jump_up: music.beginMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once); break;
-            case enMusic.jump_down: music.beginMelody(music.builtInMelody(Melodies.JumpDown), MelodyOptions.Once); break;
-            case enMusic.power_up: music.beginMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once); break;
-            case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
-        }
-    }
-
     //% blockId=SuperBit_Servo block="Servo(180°)|num %num|value %value"
     //% weight=97
-    //% blockGap=10
+    //% blockGap=20
     //% num.min=1 num.max=4 value.min=0 value.max=180
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
     export function Servo(num: enServo, value: number): void {
 
         // 50hz: 20,000 us
@@ -267,9 +236,8 @@ namespace SuperBit {
 
     //% blockId=SuperBit_Servo2 block="Servo(270°)|num %num|value %value"
     //% weight=96
-    //% blockGap=10
+    //% blockGap=20
     //% num.min=1 num.max=4 value.min=0 value.max=270
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
     export function Servo2(num: enServo, value: number): void {
 
         // 50hz: 20,000 us
@@ -282,9 +250,8 @@ namespace SuperBit {
 
     //% blockId=SuperBit_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
     //% weight=96
-    //% blockGap=10
+    //% blockGap=20
     //% num.min=1 num.max=4 value.min=0 value.max=90
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
     export function Servo3(num: enServo, pos: enPos, value: number): void {
 
         // 50hz: 20,000 us
@@ -310,8 +277,8 @@ namespace SuperBit {
     }
     //% blockId=SuperBit_MotorRun block="Motor|%index|speed(-255~255) %speed"
     //% weight=93
+    //% blockGap = 20
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRun(index: enMotors, speed: number): void {
         if (!initialized) {
             initPCA9685()
@@ -348,34 +315,9 @@ namespace SuperBit {
 
     }
 
-
-
-    //% blockId=SuperBit_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
-    //% weight=92
-    //% blockGap=50
-    //% speed1.min=-255 speed1.max=255
-    //% speed2.min=-255 speed2.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=2
-    export function MotorRunDual(motor1: enMotors, speed1: number, motor2: enMotors, speed2: number): void {
-        MotorRun(motor1, speed1);
-        MotorRun(motor2, speed2);
-    }
-
-    //% blockId=SuperBit_StepperDegree block="Stepper Motor(28BYJ-48) |%index|degree %degree"
-    //% weight=90
-    export function StepperDegree(index: enSteppers, degree: number): void {
-        if (!initialized) {
-            initPCA9685()
-        }
-        setStepper(index, degree > 0);
-        degree = Math.abs(degree);
-        basic.pause(10240 * degree / 360);
-        MotorStopAll()
-    }
-
     //% blockId=SuperBit_MotorStopAll block="Motor Stop All"
     //% weight=91
-    //% blockGap=50
+    //%  blockGap = 20
     export function MotorStopAll(): void {
         if (!initialized) {
             initPCA9685()
@@ -388,15 +330,33 @@ namespace SuperBit {
 
     }
 
-    //% blockId=SuperBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
+
+    //% blockId=SuperBit_StepperDegree block="Stepper Motor |%index|degree %degree"
+    //% weight=90
+    //%  blockGap = 20
+    export function StepperDegree(index: enSteppers, degree: number): void {
+        if (!initialized) {
+            initPCA9685()
+        }
+        setStepper(index, degree > 0);
+        degree = Math.abs(degree);
+        basic.pause(10240 * degree / 360);
+        MotorStopAll()
+    }
+
+
+
+    //% blockId=SuperBit_StepperTurn block="Stepper Motor |%index|turn %turn|circle"
     //% weight=89
+    //%  blockGap = 20
     export function StepperTurn(index: enSteppers, turn: enTurns): void {
         let degree = turn;
         StepperDegree(index, degree);
     }
 
-    //% blockId=SuperBit_StepperDual block="Dual Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
+    //% blockId=SuperBit_StepperDual block="Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
     //% weight=88
+    //%  blockGap = 20
     export function StepperDual(degree1: number, degree2: number): void {
         if (!initialized) {
             initPCA9685()
@@ -421,19 +381,29 @@ namespace SuperBit {
 
     //% blockId=SuperBit_PWMOFF block="PWM OFF|%index"
     //% weight=87
+    //%  blockGap = 20
     export function PWMOFF(index: number): void {
         setPwm(index, 0, 0);
     }
 
     export enum DigitalSensors {
+        //% blockId="Switch" block="Switch"
         Switch = 0,
+        //% blockId="Button" block="Button"
         Button = 1,
+        //% blockId="Limit_Switch" block="Limit_Switch"
         Limit_Switch = 2,
+        //% blockId="Touch_Button" block="Touch_Button"
         Touch_Button = 3,
+        //% blockId="Reed_Switch" block="Reed_Switch"
         Reed_Switch = 4,
+        //% blockId="Tilt_Switch" block="Tilt_Switch"
         Tilt_Switch = 5,
+        //% blockId="Trace_Sensor" block="Trace_Sensor"
         Trace_Sensor = 6,
+        //% blockId="Count_Sensor" block="Count_Sensor"
         Count_Sensor = 7,
+        //% blockId="Droplet_Sensor" block="Droplet_Sensor"
         Droplet_Sensor = 8
     }
 
@@ -448,8 +418,9 @@ namespace SuperBit {
   数字传感器
      */
 
-    //% blockId=SuperBit_DigitalSersor weight=86 blockGap=30
-    //% block="%k | sersor at %p"
+    //% blockId=SuperBit_DigitalSersor weight=86 
+    //%  blockGap = 20
+    //% block="%k | sersor at pin %p"
     export function DigitalSersor(k: DigitalSensors, p: InputPins): boolean {
         //   let a: number = pins.digitalReadPin(p+7);
         if (k == 0) {
@@ -515,11 +486,17 @@ namespace SuperBit {
  */
 
     export enum AnalogSensors {
+        //% blockId="Potentiometer" block="Potentiometer"
         Potentiometer = 0,
+        //% blockId="Voice" block="Voice"
         Voice = 1,
+        //% blockId="Light" block="Light"
         Light = 2,
+        //% blockId="Sliding" block="Sliding"
         Sliding = 3,
+        //% blockId="Ultrasonic" block="Ultrasonic"
         Ultrasonic = 4,
+        //% blockId="Temperature" block="Temperature"
         Temperature = 5
     }
 
@@ -527,8 +504,9 @@ namespace SuperBit {
     /**
  Returns the value of the moisture sensor on a scale of 0 to 100.
  */
-    //% blockId=SuperBit_AnalogSensor weight=85 blockGap=22
-    //% block="%k | sensor at %p"
+    //% blockId=SuperBit_AnalogSensor weight=85 
+    //%  blockGap = 20
+    //% block="%k | sensor at pin %p"
     export function AnalogSensor(k: AnalogSensors, p: InputPins): number {
         if (k == 0)
             return pins.map(pins.analogReadPin(p + 7), 0, 1023, 100, 0);
@@ -545,5 +523,6 @@ namespace SuperBit {
         else
             return 0;
     }
+    //%  blockGap = 30
 
 }
