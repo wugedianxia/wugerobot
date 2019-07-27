@@ -1,7 +1,4 @@
 {
-    "name": "WugeBit",
-    "version": "1.0.6",
-    "description": "Extension for WugeBit v1.0.6",
     "license": "MIT",
     "dependencies": {
         "core": "*",
@@ -18,5 +15,5 @@
     ],
     "public": true,
     "preferredEditor": "tsprj",
-    "installedVersion": "workspace:462a7046-46a7-4868-bb94-46b496440861"
+    "installedVersion": "workspace:3c775f6c-b0d6-4317-054c-fc1356b0f340"
 }
