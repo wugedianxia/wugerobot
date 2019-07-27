@@ -1,5 +1,5 @@
 {
-    "name": "WugeBit",
+    "name": "WugeBitNew",
     "version": "1.0.4",
     "description": "Extension for WugeBit v0726-2335",
     "license": "MIT",
@@ -18,5 +18,5 @@
     ],
     "public": true,
     "preferredEditor": "tsprj",
-    "installedVersion": "workspace:462a7046-46a7-4868-bb94-46b496440861"
+    "installedVersion": "workspace:3c775f6c-b0d6-4317-054c-fc1356b0f340"
 }
