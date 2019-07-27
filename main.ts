@@ -502,7 +502,7 @@ namespace WugeBit {
  Returns the value of the moisture sensor on a scale of 0 to 100.
  */
     //% blockId=SuperBit_AnalogSensor weight=100 
-    //%  blockGap = 20
+    //%  blockGap = 21
     //% block="%k | sensor at pin %p"
     export function AnalogSensor(k: AnalogSensors, p: InputPins): number {
         if (k == 0)
