@@ -1,6 +1,6 @@
 {
     "name": "WugeBit",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Extension for WugeBit v0726-2335",
     "license": "MIT",
     "dependencies": {
