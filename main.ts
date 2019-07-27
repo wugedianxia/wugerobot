@@ -1,5 +1,5 @@
 //% color="#ECA40D" weight=20 icon="\uf0a0" 
-namespace WugeBit {
+namespace SuperBit {
 
     const PCA9685_ADD = 0x40
     const MODE1 = 0x00
@@ -502,7 +502,7 @@ namespace WugeBit {
  Returns the value of the moisture sensor on a scale of 0 to 100.
  */
     //% blockId=SuperBit_AnalogSensor weight=100 
-    //%  blockGap = 20
+    //%  blockGap = 21
     //% block="%k | sensor at pin %p"
     export function AnalogSensor(k: AnalogSensors, p: InputPins): number {
         if (k == 0)
