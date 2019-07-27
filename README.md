@@ -1,6 +1,6 @@
 # WugeBit
 
-Extension for WugeBit V1.0.1
+Extension for WugeBit V1.0.6
 
 ## License
 
