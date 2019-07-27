@@ -1,7 +1,5 @@
 {
-    "name": "SuperBit",
-    "version": "1.0.5",
-    "description": "Extension for SuperBit v1.0.05",
+
     "license": "MIT",
     "dependencies": {
         "core": "*",
