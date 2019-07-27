@@ -1,4 +1,4 @@
-# WugeBit
+# SuperBit
 
 Extension for WugeBit V1.0.1
 
